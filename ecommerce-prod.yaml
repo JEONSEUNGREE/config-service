@@ -1,0 +1,11 @@
+token:
+  expiration_time: 86400000
+  secret: user_token_prod
+
+gateway:
+  ip: 192.168.0.8
+
+# 바뀐 설정을 스프링에 적용법
+# 1. 서버 재기동
+# 2. Acutator refresh
+# 3. spring cloud bus사용
