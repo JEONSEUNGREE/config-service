@@ -4,8 +4,35 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  #  profiles:
+#    active: native
   cloud:
     config:
       server:
+#        native:
+#          search-locations: file:/home/ree/WORKSPACE/config-service
         git:
           uri: https://github.com/JEONSEUNGREE/config-service.git
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
+
+
+# RabbitMQ
+# 메시지 브로커
+# 초당 20+ 메시지를 소비자에게 전달
+# 메시지 전달 보장, 시스템 간 메시지 전달
+# 브로커, 소비자 중심
+
+# Kafka
+# 초당 100+ 이상이 이벤트 처리
+# Pub/Sub, Topic 에 메시지를 전달
+# Ack를 기다리지않고 전달 가능
+# 생산자 중심
