@@ -1,0 +1,13 @@
+spring:  
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: '{cipher}30112ebbd53cdff8a22e0b76eb15362f89ddd33509974a5ee3acbcba6bbb4ba8'
+    password: '{cipher}7dcf244a740364192b5ecb9d9192f72bc83381155fb1b21091dba5d8f3697cd4'
+
+token:
+  expiration_time: 86400000
+  secret: user_token_rabbitMQ
+
+gateway:
+  ip: 192.168.0.8
