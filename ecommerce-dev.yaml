@@ -5,6 +5,11 @@ token:
 gateway:
   ip: 192.168.0.8
 
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+  orders_is_empty: User's orders is empty.
+
 # 바뀐 설정을 스프링에 적용법
 # 1. 서버 재기동
 # 2. Acutator refresh
